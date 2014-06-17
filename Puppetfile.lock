@@ -1,8 +1,12 @@
 FORGE
   remote: http://forge.puppetlabs.com
   specs:
-    puppetlabs/ntp (3.1.1)
+    nanliu/staging (0.4.0)
+    puppetlabs/apt (1.5.0)
+      puppetlabs/stdlib (>= 2.2.1)
+    puppetlabs/concat (1.1.0)
       puppetlabs/stdlib (>= 4.0.0)
+    puppetlabs/firewall (1.1.2)
     puppetlabs/stdlib (4.2.2)
 
 GIT
@@ -15,15 +19,38 @@ GIT
       puppetlabs/stdlib (>= 2.4.0)
 
 GIT
-  remote: https://github.com/puppetlabs/puppetlabs-concat
+  remote: https://github.com/puppetlabs/puppetlabs-postgresql
   ref: master
-  sha: f70881fbfd01c404616e9e4139d98dad78d5a918
+  sha: 5d4ecb1b04c908fdc274c14e0e93276c8b132d2e
   specs:
-    puppetlabs/concat (1.1.0)
-      puppetlabs/stdlib (>= 4.2.0)
+    puppetlabs/postgresql (3.3.3)
+      puppetlabs/apt (< 2.0.0, >= 1.1.0)
+      puppetlabs/concat (< 2.0.0, >= 1.0.0)
+      puppetlabs/firewall (>= 0.0.4)
+      puppetlabs/stdlib (< 5.0.0, >= 3.2.0)
+
+GIT
+  remote: https://github.com/puppetlabs/puppetlabs-rabbitmq
+  ref: master
+  sha: 88afb8d2c5172e53134a7f51aa7e4ab35f77d571
+  specs:
+    puppetlabs/rabbitmq (4.0.0)
+      nanliu/staging (>= 0.3.1)
+      puppetlabs/apt (>= 1.0.0)
+      puppetlabs/stdlib (>= 2.0.0)
+
+GIT
+  remote: https://github.com/saz/puppet-memcached
+  ref: master
+  sha: 2f5cf83d4b0967693814a1d636d3d64d41a3e808
+  specs:
+    puppetlabs/memcached (2.4.0)
+      puppetlabs/firewall (>= 0.1.0)
+      puppetlabs/stdlib (>= 3.2.0)
 
 DEPENDENCIES
   puppetlabs/apache (>= 0)
-  puppetlabs/concat (>= 0)
-  puppetlabs/ntp (>= 0)
+  puppetlabs/memcached (>= 0)
+  puppetlabs/postgresql (>= 0)
+  puppetlabs/rabbitmq (>= 0)
 
