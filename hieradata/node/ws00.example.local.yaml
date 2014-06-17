@@ -1,0 +1,3 @@
+apache::serveradmin: 'joe@example.com'
+apache::service_name: 'apache2'
+my_message: 'Hello, World WS00!!!'
